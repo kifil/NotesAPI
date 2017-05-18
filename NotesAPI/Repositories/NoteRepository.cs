@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace NotesAPI.Models
 {
@@ -18,7 +17,10 @@ namespace NotesAPI.Models
         {
             if (!String.IsNullOrEmpty(query))
             {
-                return _context.Notes.Where(n => n.body.ToLower().Contains(query.ToLower())).ToList();
+                //return any matching notes, case-insensitive
+                return _context.Notes
+                    .Where(n => n.body.ToLower().Contains(query.ToLower()))
+                    .ToList();
             }
 
             return _context.Notes.ToList();
