@@ -4,14 +4,15 @@ This is a RESTful API that allows you to store and retrieve notes.
 
 # Setup
 
-1. Install microsoft .net core:
+1. Install the microsoft .net core SDK: https://www.microsoft.com/net/download/core
 2. Clone this repository
 3. Open command line
 4. Run the following commands:
-    1. cd [Cirectory with the .csproj file]
+    1. cd [Directory with the .csproj file]
     2. dotnet restore
     3. dotnet run
-6. Open a browser window with the port specified 
+6. Open a browser window with the url listed in command line
+7. Optional: Navigate to [local url]/api/notes to see any saved notes
 
 # API
 ##### Note Model
@@ -49,5 +50,5 @@ Returns: A list of my notes
 
 ```
 GET /api/notes?query=bodyText
-Returns: A list of my notes
+Returns: A list of my notes  that have the specified body text
 ```
