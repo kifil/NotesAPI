@@ -16,28 +16,38 @@ This is a RESTful API that allows you to store and retrieve notes.
 # API
 ##### Note Model
 
-`{
+```
+{
  "id" : 1,
  "body" : "Ask Larry about the TPS reports."
-}`
+}
+```
 
 ##### Create a new note
 
-`POST /api/notes
+```
+POST /api/notes
 BODY a note
-Returns: a saved note...` 
+Returns: a saved note... 
+```
 
 ##### Get an existing note
 
-`GET /api/notes/{id}
-Returns: the requested note..`
+```
+GET /api/notes/{id}
+Returns: the requested note..
+```
 
 ##### Get all of my notes
 
-`GET /api/notes
-Returns: A list of my notes`
+```
+GET /api/notes
+Returns: A list of my notes
+```
 
 ##### Get all of my notes with some body text
 
-`GET /api/notes?query=bodyText
-Returns: A list of my notes`
+```
+GET /api/notes?query=bodyText
+Returns: A list of my notes
+```
